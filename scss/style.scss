@@ -262,14 +262,13 @@ h1{
 .regions-wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 5rem 0 0 7rem;
     line-height: 4.5rem;
 }
 
 .regions-left {
-    padding-right: 5rem;
+    
     border-right: 0.1rem solid $secondary-white;
     
 }
@@ -467,6 +466,21 @@ h1{
 }
 
 
+@media (max-width:1180px) {
+
+    .regions-wrapper{
+        text-align: center;
+    }
+
+    .regions-left{
+        margin-bottom: 4rem;
+    }
+    .regions-right{
+        padding-left: 0;
+    }
+}
+
+
 
 
 @media (max-width:1060px) {
@@ -509,6 +523,10 @@ h1{
 
 @media (max-width:720px) {
 
+    .regions-wrapper{
+        text-align: center;
+    }
+
     .video-wrapper iframe{
         width: 35rem;
         height: 25rem;
@@ -538,6 +556,15 @@ h1{
         padding-right: 1rem;
     }
 
+    .regions-wrapper{
+        padding-top: 3rem;
+    }
+
+    .regions-left, .regions-center{
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+    }
+
     .hero-title{
         font-size: 5rem;
     }
@@ -549,6 +576,9 @@ h1{
 
 
 @media (max-width:420px) {
+
+    
+
     .cards-wrapper{
         display: block;
         text-align: start;
@@ -566,6 +596,10 @@ h1{
 
     .card-img{
         width: 33rem;
+    }
+
+    .regions-title{
+        font-size: 2.8rem;
     }
 }
 
