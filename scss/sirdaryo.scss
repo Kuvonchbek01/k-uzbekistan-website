@@ -1,0 +1,414 @@
+@import 'colors';
+@import 'fonts';
+
+
+// GLOBAL
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    height: 100%;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.container{
+    max-width: 126rem;
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.main-content{
+    flex-grow: 1;
+}
+
+h1{
+    font-family: 'Bebas';
+    margin: 0;
+}
+
+.devider{
+    margin-bottom: 3rem;
+}
+
+// header
+.site-header {
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header-wrapper {
+    padding: 1.8rem 0 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-logo-link {
+    transition: 0.2s;
+}
+
+.site-logo-link:hover{
+    opacity: 0.8;
+}
+
+.sitenav ul li{
+    margin: 0 20px;
+    position: relative;
+}
+
+.sitenav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: $danger;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.sitenav ul li:hover::after{
+    width: 100%;
+}
+
+.sitenav-list {
+    display: flex;
+    align-items: center;
+}
+
+.sitenav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.sitenav-link {
+    font-family: 'Bebas';
+    font-size: 1.9rem;
+    color: $dark;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+
+.sitenav-link:hover{
+    color: $danger;
+}
+
+
+// HERO
+.hero {
+    width: 100%;
+    height: 50rem;
+    background: linear-gradient(rgba(0,0,0,0.5)), url('../images/img-sirdaryo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 9rem;
+}
+
+.hero-wrapper {
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 8rem;
+    color: $white;
+    margin-bottom: 7rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-title span{
+    color: $danger;
+}
+
+.main-button {
+    font-family: 'Bebas';
+    color: $white;
+    font-size: 2rem;
+    border: 0.2rem solid $white;
+    border-radius: 4.5rem;
+    padding: 1.5rem 2.4rem;
+    background-color: transparent;
+    transition: 0.5s;
+    letter-spacing: 0;
+}
+
+.main-button:hover{
+    background-color: $white;
+    color: $danger;
+}
+
+
+.regions {
+    padding: 7rem 0 ;
+}
+
+.regions-title {
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+.regions-text{
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 2.3rem;
+}
+
+
+
+
+
+
+// FOOTER
+.site-footer {
+    background-color: $secondary-dark;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 0 1.8rem;
+}
+
+.footer-logo {
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.footer-logo:hover{
+    opacity: 0.8;
+}
+
+.footernav-list {
+    display: flex;
+    align-items: center;
+}
+
+.footernav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.footernav ul li{
+    margin: 0 20px;
+    position: relative;
+}
+
+.footernav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: $white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.footernav ul li:hover::after{
+    width: 100%;
+}
+
+.footernav-list {
+    display: flex;
+    align-items: center;
+}
+
+.footernav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.footernav-link {
+    font-family: 'Bebas';
+    font-size: 1.9rem;
+    color: $white;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+
+
+// Hidden
+
+.hiddennav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 25rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 10rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateX(-110%);
+    transition: transform 0.4s ease-in-out;
+    // box-shadow: 11px -1px 29px -3px #000000;
+}
+
+.hiddennav-list {
+    
+}
+
+.hiddennav-item {
+    border-bottom: 0.15rem solid $dark;
+    display: block;
+    width: 100%;
+    padding: 1rem 0 1rem 5rem;
+}
+
+.hiddennav-item:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.hiddennav-link {
+    font-family: 'Bebas';
+    font-size: 1.5rem;
+    color: $dark;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+}
+
+.hiddennav-link:hover{
+    color: $danger;
+}
+
+.hiddennav.showNav{
+    transform: translateX(0);
+}
+
+
+.menu-link {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.menu {
+    height: 4rem;
+}
+
+
+
+@media (max-width:1060px) {
+    .regions-text{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+@media (max-width:955px) {
+
+    .regions-left, .regions-center{
+        border: none;
+        padding-right: 0;
+        border-bottom: 0.1rem solid $secondary-white;
+        margin-bottom: 5rem;
+    }
+
+    .regions-center, .regions-right{
+        padding: 0;
+    }
+
+    .regions-title{
+        text-align: center;
+    }
+
+    .card{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .news-title{
+        text-align: center;
+    }
+}
+
+
+@media (max-width:720px) {
+
+    .video-wrapper iframe{
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .footer-logo{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sitenav, .footernav{
+        display: none;
+    }
+
+    .hiddennav, .menu-link{
+        display: block;
+    }
+
+    .regions-wrapper{
+        padding-left: 0;
+    }
+}
+
+@media (max-width:600px) {
+    .container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-title{
+        font-size: 5rem;
+    }
+
+    .subscribe-title{
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (max-width:420px) {
+    .cards-wrapper{
+        display: block;
+        text-align: start;
+    }
+
+    .card{
+        max-width: 35rem;
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+
+    .card:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    .card-img{
+        width: 33rem;
+    }
+}

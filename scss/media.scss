@@ -1,0 +1,99 @@
+@media (max-width:1060px) {
+    .regions-text{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+@media (max-width:955px) {
+
+    .regions-left, .regions-center{
+        border: none;
+        padding-right: 0;
+        border-bottom: 0.1rem solid $secondary-white;
+        margin-bottom: 5rem;
+    }
+
+    .regions-center, .regions-right{
+        padding: 0;
+    }
+
+    .regions-title{
+        text-align: center;
+    }
+
+    .card{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .news-title{
+        text-align: center;
+    }
+}
+
+
+@media (max-width:720px) {
+
+    .video-wrapper iframe{
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .footer-logo{
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .sitenav, .footernav{
+        display: none;
+    }
+
+    .hiddennav, .menu-link{
+        display: block;
+    }
+
+    .regions-wrapper{
+        padding-left: 0;
+    }
+}
+
+@media (max-width:600px) {
+    .container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero-title{
+        font-size: 5rem;
+    }
+
+    .subscribe-title{
+        font-size: 3.5rem;
+    }
+}
+
+
+@media (max-width:420px) {
+    .cards-wrapper{
+        display: block;
+        text-align: start;
+    }
+
+    .card{
+        max-width: 35rem;
+        padding: 1rem 1rem;
+        text-align: center;
+    }
+
+    .card:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    .card-img{
+        width: 33rem;
+    }
+}
